@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MPEG21 MCO SC</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/codemirror/CodeMirror/master/theme/base16-dark.css"
+    />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">
+            MPEG-21 Media Contract Ontology to Smart Contract
+          </h1>
+          <hr />
+          <br />
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <form>
+            <div id="formdiv">
+              <label for="caddr">Contract Address:</label>
+              <input
+                type="text"
+                id="caddr"
+                name="caddr"
+                value="0xBbdA7C2fB654F901B38743A6A6D5afC27497791d"
+                size="42"
+              />
+              <button class="btn btn-danger btn-update" type="button">
+                Update
+              </button>
+              <div id="cstatus">Searching Contract...</div>
+            </div>
+          </form>
+          <div id="metamask" style="display: none;">
+            <center>
+              <form action="./getmetamask.html" method="get">
+                <button
+                  class="btn btn-success btn-update btn-block"
+                  type="submit"
+                >
+                  HOW TO SETUP METAMASK!
+                </button>
+              </form>
+            </center>
+          </div>
+          <hr />
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6"><textarea id="editor"></textarea></div>
+      <div class="col-sm-6"><textarea id="editor2"></textarea></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <button class="btn btn-default btn-case" type="button" data-id="0">
+          Case 1
+        </button>
+        <button class="btn btn-default btn-case" type="button" data-id="1">
+          Case 2
+        </button>
+        <button class="btn btn-default btn-case" type="button" data-id="2">
+          Case 3
+        </button>
+        <button class="btn btn-default btn-case" type="button" data-id="3">
+          Case 4
+        </button>
+        <button class="btn btn-default btn-case" type="button" data-id="4">
+          Case 5
+        </button>
+        <button class="btn btn-default btn-case" type="button" data-id="5">
+          Case 6
+        </button>
+      </div>
+      <div id="uploadbtn" class="col-sm-6">
+        <button class="btn btn-primary btn-contract" type="button">
+          Upload Contract to Ethereum Blockchain
+        </button>
+        <button class="btn btn-success btn-refresh" type="button">
+          Refresh Token List
+        </button>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <!-- <script src="js/truffle-contract.js"></script> -->
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/codemirror.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/javascript/javascript.js"
+    ></script>
+  </body>
+</html>
