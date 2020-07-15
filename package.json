@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+    "start": "npm run test",
+    "dev": "lite-server",
+    "test": "lite-server"
   },
   "author": "",
   "license": "ISC",
