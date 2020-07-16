@@ -65,6 +65,11 @@ App = {
       // Set the provider for our contract
       App.contracts.ipentity.setProvider(App.web3Provider);
       $('#cstatus').text('Contract Found!');
+      $('#clink').text('https://ropsten.etherscan.io/token/' + contractAddress);
+      $('#clink').attr(
+        'href',
+        'https://ropsten.etherscan.io/token/' + contractAddress
+      );
     } catch (error) {
       console.log(error);
       $('#cstatus').text('Contract Error!');
@@ -128,12 +133,16 @@ App = {
     const caller = await web3.eth.getAccounts();
 
     try {
+      document.getElementById('uploadbtn').style.display = 'none';
+      $('#mcoup').text('Uploading MCO Contract...');
       await App.contracts.ipentity.methods
         .newMCOContract(
           web3.utils.asciiToHex(Math.random().toString(36).substring(2)),
           Object.values(parties)
         )
         .send({ from: caller[0] });
+      document.getElementById('uploadbtn').style.display = 'block';
+      $('#mcoup').text('');
 
       jsonContract.issues.forEach(async (element) => {
         switch (element['@type'][0]) {
