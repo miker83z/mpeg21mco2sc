@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+import "@openzeppelin/contracts/math/SafeMath.sol";
+
+contract Payments {
+    using SafeMath for uint256;
+
+    // IPEntity smart contract address on chain
+    address private _ipEntityContractAddress;
+
+    // MCO contract unique identifier
+    bytes private _contractId;
+
+    constructor(address ipEntityContractAddress, bytes memory mcoContractId)
+        public
+    {
+        _ipEntityContractAddress = ipEntityContractAddress;
+        _contractId = mcoContractId;
+    }
+
+    function pay_to_(uint256 value) public payable {
+        address payable beneficiary = msg.sender;
+        uint256 final_value = _income_percentage(value);
+        beneficiary.transfer(final_value);
+    }
+
+    function _income_percentage_(uint256 value) private returns (uint256) {
+        uint256 final_value = value;
+
+        uint256 amount = value.mul(10).div(100);
+        pay_to_(amount);
+        final_value = final_value.sub(amount);
+
+        return final_value;
+    }
+}

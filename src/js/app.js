@@ -3,10 +3,15 @@ App = {
   contracts: {},
   editor: null,
   editor2: null,
+  editor3: null,
+  paymentsBeneficiaries: new Set(),
+  payers: {},
+  incomes: {},
 
   init: async function () {
     // Load pets.
     const data = await $.getJSON('../json-ld/stream-big-label.json');
+    App.template = await $.getJSON('../sc.template.json');
     App.accounts = await $.getJSON('../accounts.json');
 
     App.editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
@@ -23,6 +28,16 @@ App = {
     });
     App.editor2.setValue('Loading tokens from blockchain...');
     App.editor2.setSize(null, 500);
+
+    App.editor3 = CodeMirror.fromTextArea(document.getElementById('editor3'), {
+      lineNumbers: true,
+      mode: { name: 'javascript' },
+      theme: 'base16-dark',
+    });
+    App.editor3.setValue('Generating payments smart contract...');
+    App.editor3.setSize(null, 500);
+
+    App.utilsString();
 
     return App.initWeb3();
   },
@@ -86,6 +101,7 @@ App = {
     $(document).on('click', '.btn-refresh', App.showBalancesList);
     $(document).on('click', '.btn-update', App.initContract);
     $(document).on('click', '.btn-case', App.setCase);
+    $(document).on('click', '.btn-convert', App.handleConvert);
   },
 
   showBalancesList: async function () {
@@ -141,12 +157,13 @@ App = {
           Object.values(parties)
         )
         .send({ from: caller[0] });
-      document.getElementById('uploadbtn').style.display = 'block';
-      $('#mcoup').text('');
 
       jsonContract.issues.forEach(async (element) => {
         switch (element['@type'][0]) {
           case 'mco-core:Obligation':
+            if (element['obligatesAction']['@type'][0] === 'mco-ipre:Payment') {
+              App.handlePayment(element);
+            }
             await App.contracts.ipentity.methods
               .newObligation(
                 web3.utils.asciiToHex('hKL30svS0pLsv8hXQ98h23L'),
@@ -177,10 +194,108 @@ App = {
             console.log(element['@type']);
         }
       });
+      App.finalConvert(parties);
     } catch (error) {
       console.log(error);
+    } finally {
+      App.paymentsBeneficiaries.clear();
+      for (var member in App.payers) delete App.payers[member];
+      for (var member in App.incomes) delete App.incomes[member];
+      document.getElementById('uploadbtn').style.display = 'block';
+      $('#mcoup').text('');
     }
     return App.showBalancesList();
+  },
+
+  handleConvert: function (event) {
+    event.preventDefault();
+
+    const jsonContract = JSON.parse(App.editor.getValue());
+    if (jsonContract['hasParty'].length > 10) return;
+
+    const parties = {};
+    for (let i = 0; i < jsonContract['hasParty'].length; i++) {
+      parties[jsonContract['hasParty'][i]['@id']] = App.accounts[i + 1];
+    }
+
+    try {
+      document.getElementById('convertbtn').style.display = 'none';
+
+      jsonContract.issues.forEach(async (element) => {
+        if (element['@type'][0] === 'mco-core:Obligation') {
+          if (element['obligatesAction']['@type'][0] === 'mco-ipre:Payment') {
+            App.handlePayment(element);
+          }
+        }
+      });
+
+      App.finalConvert(parties);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      App.paymentsBeneficiaries.clear();
+      for (var member in App.payers) delete App.payers[member];
+      for (var member in App.incomes) delete App.incomes[member];
+      document.getElementById('convertbtn').style.display = 'block';
+    }
+  },
+
+  handlePayment: function (element) {
+    const benef = element['obligatesAction']['mco-pane:hasBeneficiary']['@id'];
+    App.paymentsBeneficiaries.add(benef);
+
+    if (element['obligatesAction']['mco-pane:hasAmount']) {
+      const payer = element['obligatesAction']['actedBy']['@id'];
+      if (App.payers[payer] === undefined) {
+        App.payers[payer] = [];
+      }
+      App.payers[payer].push({
+        amount: element['obligatesAction']['mco-pane:hasAmount'],
+        beneficiary: benef,
+      });
+    } else if (element['obligatesAction']['mco-pane:hasIncomePercentage']) {
+      const payer = element['obligatesAction']['actedBy']['@id'];
+      if (App.incomes[payer] === undefined) {
+        App.incomes[payer] = [];
+      }
+      App.incomes[payer].push({
+        incomePercentage:
+          element['obligatesAction']['mco-pane:hasIncomePercentage'],
+        beneficiary: benef,
+      });
+    }
+  },
+
+  finalConvert: function (parties) {
+    let incomeFunctions = '';
+    let payFunctions = '';
+    let strictPayFunctions = [];
+
+    App.paymentsBeneficiaries.forEach((benef) => {
+      let hasIncomes = false;
+      if (App.incomes[benef]) {
+        hasIncomes = true;
+        receiversString = '';
+        App.incomes[benef].forEach((inc) => {
+          receiversString += App.template.incomePayCode.format(
+            inc.incomePercentage,
+            inc.beneficiary
+          );
+        });
+        incomeFunctions +=
+          '\n' +
+          App.template.incomePercentage.format(benef, receiversString) +
+          '\n';
+      }
+      const payFunct = hasIncomes
+        ? App.template.pay.format(benef, parties[benef])
+        : App.template.pay_no_income.format(benef, parties[benef]);
+      payFunctions += '\n' + payFunct + '\n';
+    });
+
+    App.editor3.setValue(
+      App.template.completeContract.format(payFunctions, incomeFunctions)
+    );
   },
 
   setCase: async function (event) {
@@ -212,6 +327,17 @@ App = {
     }
     const data = await $.getJSON(jsonFile);
     App.editor.setValue(JSON.stringify(data, null, 2));
+  },
+
+  utilsString: function () {
+    if (!String.prototype.format) {
+      String.prototype.format = function () {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function (match, number) {
+          return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+      };
+    }
   },
 };
 

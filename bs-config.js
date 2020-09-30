@@ -1,7 +1,7 @@
 module.exports = {
-  port: process.env.PORT,
+  port: 8889,
   files: ['.src/**/*.{html,htm,css,js}'],
   server: {
-    baseDir: ['./src', './build/contracts'],
+    baseDir: ['./src', './solidity/build/contracts'],
   },
 };
