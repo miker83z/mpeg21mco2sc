@@ -252,6 +252,7 @@ App = {
       App.payers[payer].push({
         amount: element['obligatesAction']['mco-pane:hasAmount'],
         beneficiary: benef,
+        isCustomer: payer === 'Consumer',
       });
     } else if (element['obligatesAction']['mco-pane:hasIncomePercentage']) {
       const payer = element['obligatesAction']['actedBy']['@id'];
@@ -269,7 +270,7 @@ App = {
   finalConvert: function (parties) {
     let incomeFunctions = '';
     let payFunctions = '';
-    let strictPayFunctions = [];
+    let strictPayFunctions = '';
 
     App.paymentsBeneficiaries.forEach((benef) => {
       let hasIncomes = false;
@@ -293,8 +294,29 @@ App = {
       payFunctions += '\n' + payFunct + '\n';
     });
 
+    Object.keys(App.payers).forEach((payer) => {
+      App.payers[payer].forEach((strictPay) => {
+        const isCustomer = strictPay.isCustomer
+          ? ''
+          : App.template.payFromRequire.format(parties[payer]);
+        strictPayFunctions +=
+          '\n' +
+          App.template.payFrom.format(
+            strictPay.beneficiary,
+            payer,
+            strictPay.amount,
+            isCustomer
+          ) +
+          '\n';
+      });
+    });
+
     App.editor3.setValue(
-      App.template.completeContract.format(payFunctions, incomeFunctions)
+      App.template.completeContract.format(
+        payFunctions,
+        incomeFunctions,
+        strictPayFunctions
+      )
     );
   },
 

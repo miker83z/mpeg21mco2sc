@@ -27,6 +27,12 @@ contract Payments {
         beneficiary.transfer(final_value);
     }
 
+    function pay_to_StreamingService_from_Ass() public payable {
+        require(msg.sender == 0x1a29170A7CB0b08d6632092832ed97E7891d3250);
+
+        pay_to_StreamingService(10);
+    }
+
     function pay_to_Publisher(uint256 value) public payable {
 
             address payable beneficiary
