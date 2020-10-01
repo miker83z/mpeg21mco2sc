@@ -132,8 +132,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -146,8 +145,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -166,8 +164,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -191,8 +188,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -205,8 +201,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -225,8 +220,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -314,8 +308,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -328,8 +321,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -348,8 +340,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -373,8 +364,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -393,8 +383,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -407,8 +396,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -575,7 +563,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 1586,
+        "sourceUnit": 1733,
         "src": "91:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -586,7 +574,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 2032,
+        "sourceUnit": 2179,
         "src": "149:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -597,7 +585,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 2882,
+        "sourceUnit": 3029,
         "src": "202:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -612,10 +600,10 @@
               "id": 5,
               "name": "ERC721",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1585,
+              "referencedDeclaration": 1732,
               "src": "282:6:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721_$1585",
+                "typeIdentifier": "t_contract$_ERC721_$1732",
                 "typeString": "contract ERC721"
               }
             },
@@ -625,13 +613,13 @@
           }
         ],
         "contractDependencies": [
-          389,
-          446,
-          458,
-          1585,
-          1701,
+          536,
+          593,
+          605,
           1732,
-          1759
+          1848,
+          1879,
+          1906
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -639,13 +627,13 @@
         "id": 239,
         "linearizedBaseContracts": [
           239,
-          1585,
           1732,
-          1759,
-          1701,
-          446,
-          458,
-          389
+          1879,
+          1906,
+          1848,
+          593,
+          605,
+          536
         ],
         "name": "IPEntity",
         "nodeType": "ContractDefinition",
@@ -657,10 +645,10 @@
               "id": 7,
               "name": "Counters",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2031,
+              "referencedDeclaration": 2178,
               "src": "301:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Counters_$2031",
+                "typeIdentifier": "t_contract$_Counters_$2178",
                 "typeString": "library Counters"
               }
             },
@@ -671,10 +659,10 @@
               "id": 8,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1991,
+              "referencedDeclaration": 2138,
               "src": "314:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$1991_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$2138_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -686,10 +674,10 @@
               "id": 10,
               "name": "EnumerableSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2881,
+              "referencedDeclaration": 3028,
               "src": "342:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EnumerableSet_$2881",
+                "typeIdentifier": "t_contract$_EnumerableSet_$3028",
                 "typeString": "library EnumerableSet"
               }
             },
@@ -700,10 +688,10 @@
               "id": 11,
               "name": "EnumerableSet.AddressSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2677,
+              "referencedDeclaration": 2824,
               "src": "360:24:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                 "typeString": "struct EnumerableSet.AddressSet"
               }
             }
@@ -715,10 +703,10 @@
               "id": 13,
               "name": "EnumerableSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2881,
+              "referencedDeclaration": 3028,
               "src": "396:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EnumerableSet_$2881",
+                "typeIdentifier": "t_contract$_EnumerableSet_$3028",
                 "typeString": "library EnumerableSet"
               }
             },
@@ -729,10 +717,10 @@
               "id": 14,
               "name": "EnumerableSet.UintSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2786,
+              "referencedDeclaration": 2933,
               "src": "414:21:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                 "typeString": "struct EnumerableSet.UintSet"
               }
             }
@@ -749,7 +737,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$1991_storage",
+              "typeIdentifier": "t_struct$_Counter_$2138_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -757,10 +745,10 @@
               "id": 16,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1991,
+              "referencedDeclaration": 2138,
               "src": "442:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$1991_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$2138_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -859,7 +847,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                  "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                   "typeString": "struct EnumerableSet.AddressSet"
                 },
                 "typeName": {
@@ -867,10 +855,10 @@
                   "id": 26,
                   "name": "EnumerableSet.AddressSet",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2677,
+                  "referencedDeclaration": 2824,
                   "src": "765:24:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                    "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                     "typeString": "struct EnumerableSet.AddressSet"
                   }
                 },
@@ -889,7 +877,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                  "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                   "typeString": "struct EnumerableSet.UintSet"
                 },
                 "typeName": {
@@ -897,10 +885,10 @@
                   "id": 28,
                   "name": "EnumerableSet.UintSet",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2786,
+                  "referencedDeclaration": 2933,
                   "src": "807:21:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                    "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                     "typeString": "struct EnumerableSet.UintSet"
                   }
                 },
@@ -1086,10 +1074,10 @@
                   "name": "ERC721",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1585,
+                  "referencedDeclaration": 1732,
                   "src": "1090:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721_$1585_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721_$1732_$",
                     "typeString": "type(contract ERC721)"
                   }
                 },
@@ -1334,7 +1322,7 @@
                               "referencedDeclaration": 27,
                               "src": "1330:13:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_AddressSet_$2677_storage",
+                                "typeIdentifier": "t_struct$_AddressSet_$2824_storage",
                                 "typeString": "struct EnumerableSet.AddressSet storage ref"
                               }
                             },
@@ -1345,10 +1333,10 @@
                             "lValueRequested": false,
                             "memberName": "length",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2760,
+                            "referencedDeclaration": 2907,
                             "src": "1330:20:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$2677_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_AddressSet_$2677_storage_ptr_$",
+                              "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$2824_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_AddressSet_$2824_storage_ptr_$",
                               "typeString": "function (struct EnumerableSet.AddressSet storage pointer) view returns (uint256)"
                             }
                           },
@@ -1539,7 +1527,7 @@
                               "referencedDeclaration": 27,
                               "src": "1449:13:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_AddressSet_$2677_storage",
+                                "typeIdentifier": "t_struct$_AddressSet_$2824_storage",
                                 "typeString": "struct EnumerableSet.AddressSet storage ref"
                               }
                             },
@@ -1550,10 +1538,10 @@
                             "lValueRequested": false,
                             "memberName": "add",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2700,
+                            "referencedDeclaration": 2847,
                             "src": "1449:17:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$2677_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$2677_storage_ptr_$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$2824_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$2824_storage_ptr_$",
                               "typeString": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
                             }
                           },
@@ -2991,7 +2979,7 @@
                         "referencedDeclaration": 17,
                         "src": "2633:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$1991_storage",
+                          "typeIdentifier": "t_struct$_Counter_$2138_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -3002,10 +2990,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2014,
+                      "referencedDeclaration": 2161,
                       "src": "2633:19:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$1991_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$1991_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$2138_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$2138_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -3077,7 +3065,7 @@
                         "referencedDeclaration": 17,
                         "src": "2685:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$1991_storage",
+                          "typeIdentifier": "t_struct$_Counter_$2138_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -3088,10 +3076,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2002,
+                      "referencedDeclaration": 2149,
                       "src": "2685:17:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1991_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1991_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$2138_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$2138_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -3159,7 +3147,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1321,
+                      "referencedDeclaration": 1468,
                       "src": "2714:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -3231,7 +3219,7 @@
                       "name": "_setTokenURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1482,
+                      "referencedDeclaration": 1629,
                       "src": "2747:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
@@ -3387,7 +3375,7 @@
                         "referencedDeclaration": 29,
                         "src": "2851:24:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$2786_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$2933_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -3398,10 +3386,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2806,
+                      "referencedDeclaration": 2953,
                       "src": "2851:28:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$2786_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$2786_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$2933_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$2933_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -3621,7 +3609,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 1586,
+        "sourceUnit": 1733,
         "src": "91:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3632,7 +3620,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 2032,
+        "sourceUnit": 2179,
         "src": "149:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3643,7 +3631,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 240,
-        "sourceUnit": 2882,
+        "sourceUnit": 3029,
         "src": "202:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3658,10 +3646,10 @@
               "id": 5,
               "name": "ERC721",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1585,
+              "referencedDeclaration": 1732,
               "src": "282:6:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721_$1585",
+                "typeIdentifier": "t_contract$_ERC721_$1732",
                 "typeString": "contract ERC721"
               }
             },
@@ -3671,13 +3659,13 @@
           }
         ],
         "contractDependencies": [
-          389,
-          446,
-          458,
-          1585,
-          1701,
+          536,
+          593,
+          605,
           1732,
-          1759
+          1848,
+          1879,
+          1906
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -3685,13 +3673,13 @@
         "id": 239,
         "linearizedBaseContracts": [
           239,
-          1585,
           1732,
-          1759,
-          1701,
-          446,
-          458,
-          389
+          1879,
+          1906,
+          1848,
+          593,
+          605,
+          536
         ],
         "name": "IPEntity",
         "nodeType": "ContractDefinition",
@@ -3703,10 +3691,10 @@
               "id": 7,
               "name": "Counters",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2031,
+              "referencedDeclaration": 2178,
               "src": "301:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Counters_$2031",
+                "typeIdentifier": "t_contract$_Counters_$2178",
                 "typeString": "library Counters"
               }
             },
@@ -3717,10 +3705,10 @@
               "id": 8,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1991,
+              "referencedDeclaration": 2138,
               "src": "314:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$1991_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$2138_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -3732,10 +3720,10 @@
               "id": 10,
               "name": "EnumerableSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2881,
+              "referencedDeclaration": 3028,
               "src": "342:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EnumerableSet_$2881",
+                "typeIdentifier": "t_contract$_EnumerableSet_$3028",
                 "typeString": "library EnumerableSet"
               }
             },
@@ -3746,10 +3734,10 @@
               "id": 11,
               "name": "EnumerableSet.AddressSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2677,
+              "referencedDeclaration": 2824,
               "src": "360:24:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                 "typeString": "struct EnumerableSet.AddressSet"
               }
             }
@@ -3761,10 +3749,10 @@
               "id": 13,
               "name": "EnumerableSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2881,
+              "referencedDeclaration": 3028,
               "src": "396:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EnumerableSet_$2881",
+                "typeIdentifier": "t_contract$_EnumerableSet_$3028",
                 "typeString": "library EnumerableSet"
               }
             },
@@ -3775,10 +3763,10 @@
               "id": 14,
               "name": "EnumerableSet.UintSet",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2786,
+              "referencedDeclaration": 2933,
               "src": "414:21:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                 "typeString": "struct EnumerableSet.UintSet"
               }
             }
@@ -3795,7 +3783,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$1991_storage",
+              "typeIdentifier": "t_struct$_Counter_$2138_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -3803,10 +3791,10 @@
               "id": 16,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1991,
+              "referencedDeclaration": 2138,
               "src": "442:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$1991_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$2138_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -3905,7 +3893,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                  "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                   "typeString": "struct EnumerableSet.AddressSet"
                 },
                 "typeName": {
@@ -3913,10 +3901,10 @@
                   "id": 26,
                   "name": "EnumerableSet.AddressSet",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2677,
+                  "referencedDeclaration": 2824,
                   "src": "765:24:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_AddressSet_$2677_storage_ptr",
+                    "typeIdentifier": "t_struct$_AddressSet_$2824_storage_ptr",
                     "typeString": "struct EnumerableSet.AddressSet"
                   }
                 },
@@ -3935,7 +3923,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                  "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                   "typeString": "struct EnumerableSet.UintSet"
                 },
                 "typeName": {
@@ -3943,10 +3931,10 @@
                   "id": 28,
                   "name": "EnumerableSet.UintSet",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2786,
+                  "referencedDeclaration": 2933,
                   "src": "807:21:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UintSet_$2786_storage_ptr",
+                    "typeIdentifier": "t_struct$_UintSet_$2933_storage_ptr",
                     "typeString": "struct EnumerableSet.UintSet"
                   }
                 },
@@ -4132,10 +4120,10 @@
                   "name": "ERC721",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1585,
+                  "referencedDeclaration": 1732,
                   "src": "1090:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721_$1585_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721_$1732_$",
                     "typeString": "type(contract ERC721)"
                   }
                 },
@@ -4380,7 +4368,7 @@
                               "referencedDeclaration": 27,
                               "src": "1330:13:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_AddressSet_$2677_storage",
+                                "typeIdentifier": "t_struct$_AddressSet_$2824_storage",
                                 "typeString": "struct EnumerableSet.AddressSet storage ref"
                               }
                             },
@@ -4391,10 +4379,10 @@
                             "lValueRequested": false,
                             "memberName": "length",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2760,
+                            "referencedDeclaration": 2907,
                             "src": "1330:20:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$2677_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_AddressSet_$2677_storage_ptr_$",
+                              "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$2824_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_AddressSet_$2824_storage_ptr_$",
                               "typeString": "function (struct EnumerableSet.AddressSet storage pointer) view returns (uint256)"
                             }
                           },
@@ -4585,7 +4573,7 @@
                               "referencedDeclaration": 27,
                               "src": "1449:13:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_AddressSet_$2677_storage",
+                                "typeIdentifier": "t_struct$_AddressSet_$2824_storage",
                                 "typeString": "struct EnumerableSet.AddressSet storage ref"
                               }
                             },
@@ -4596,10 +4584,10 @@
                             "lValueRequested": false,
                             "memberName": "add",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2700,
+                            "referencedDeclaration": 2847,
                             "src": "1449:17:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$2677_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$2677_storage_ptr_$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$2824_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$2824_storage_ptr_$",
                               "typeString": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
                             }
                           },
@@ -6037,7 +6025,7 @@
                         "referencedDeclaration": 17,
                         "src": "2633:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$1991_storage",
+                          "typeIdentifier": "t_struct$_Counter_$2138_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -6048,10 +6036,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2014,
+                      "referencedDeclaration": 2161,
                       "src": "2633:19:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$1991_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$1991_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$2138_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$2138_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -6123,7 +6111,7 @@
                         "referencedDeclaration": 17,
                         "src": "2685:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$1991_storage",
+                          "typeIdentifier": "t_struct$_Counter_$2138_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -6134,10 +6122,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2002,
+                      "referencedDeclaration": 2149,
                       "src": "2685:17:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1991_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1991_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$2138_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$2138_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -6205,7 +6193,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1321,
+                      "referencedDeclaration": 1468,
                       "src": "2714:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -6277,7 +6265,7 @@
                       "name": "_setTokenURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1482,
+                      "referencedDeclaration": 1629,
                       "src": "2747:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
@@ -6433,7 +6421,7 @@
                         "referencedDeclaration": 29,
                         "src": "2851:24:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$2786_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$2933_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -6444,10 +6432,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2806,
+                      "referencedDeclaration": 2953,
                       "src": "2851:28:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$2786_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$2786_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$2933_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$2933_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -6643,93 +6631,9 @@
     "name": "solc",
     "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {
-        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "approved",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "uint256",
-              "name": "tokenId",
-              "type": "uint256"
-            }
-          ],
-          "name": "Approval",
-          "type": "event"
-        },
-        "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "operator",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "internalType": "bool",
-              "name": "approved",
-              "type": "bool"
-            }
-          ],
-          "name": "ApprovalForAll",
-          "type": "event"
-        },
-        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "from",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "to",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "internalType": "uint256",
-              "name": "tokenId",
-              "type": "uint256"
-            }
-          ],
-          "name": "Transfer",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x8c64495Fa9134850C5CBc134a50e8191cA1a17E9",
-      "transactionHash": "0xa9b9f0e2cf1f7877e996f7922381736da763efe9b8342fe9287a479ce69c2183"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.2.2",
-  "updatedAt": "2020-09-29T10:25:22.330Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-10-01T12:43:40.085Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
