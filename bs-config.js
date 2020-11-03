@@ -4,4 +4,5 @@ module.exports = {
   server: {
     baseDir: ['./src', './solidity/build/contracts'],
   },
+  ghostMode: false,
 };
